@@ -113,7 +113,6 @@ public class TerrainGenerator : MonoBehaviour
         {
             if (_cells[x - 1][y].terrainId == 2 && _cells[x + 1][y].terrainId == 2 && _cells[x][y - 1].terrainId == 2 && _cells[x][y + 1].terrainId == 2)
             {
-                Debug.Log("Volcano created!");
                 _cells[x][y].terrainSprite = volcanoSprite;
                 _cells[x][y].GetComponent<SpriteRenderer>().sprite = volcanoSprite;
                 _cells[x][y].gameObject.name = $"Volcano-{x}-{y}";
@@ -128,7 +127,6 @@ public class TerrainGenerator : MonoBehaviour
         {
             if (_cells[x - 1][y].terrainId == 1 && _cells[x + 1][y].terrainId == 1 && _cells[x][y - 1].terrainId == 1 && _cells[x][y + 1].terrainId == 1)
             {
-                Debug.Log("City created!");
                 _cells[x][y].terrainSprite = citySprite;
                 _cells[x][y].GetComponent<SpriteRenderer>().sprite = citySprite;
                 _cells[x][y].gameObject.name = $"City-{x}-{y}";
